@@ -1,5 +1,11 @@
-function debounce() {
+```
+function debounce(fn, delay) {
   let timer;
   return function(...args) {
     clearTimeout(timer);
-    timer = setTimeout(() => 
+    timer = setTimeout(() => {
+      fn(args);
+    }, delay)
+  }
+}
+```
